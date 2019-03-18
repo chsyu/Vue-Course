@@ -10,9 +10,9 @@
 - wk3: ES6
 - wk4: ES6
 - wk5: npm與webpack
-- wk6: SCSS開發
-- wk7: Ajax
-- wk8: 專案開發
+- wk6: webpack + PostCSS
+- wk7: 放假
+- wk8: 專案開發練習
 - wk9: 期中專題報告
 - wk10: React基礎與單向資料流
 - wk11: React與React-Router
