@@ -1,0 +1,14 @@
+.course {
+   background-color: #fff;
+   font-size: 1rem;
+
+   &__link {
+      display: block;
+   }
+
+   &__image {
+      width: 100%;
+      display: block;
+   }
+
+}

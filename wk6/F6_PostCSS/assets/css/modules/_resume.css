@@ -1,0 +1,28 @@
+.resume {
+   background-color: #00979c;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   color: white;
+
+   @mixin atMedium {
+      padding-top: 100px;
+      padding-bottom: 100px;
+   }
+
+   &__description {
+      text-indent: 2rem;
+   }
+
+}
+
+.btn--lg {
+   border: solid 2px #fff;
+   padding: 1em 1.75em;
+   font-size: 1.25em;
+   border-radius: 0.4em;
+}
+
+.btn--lg:hover {
+   background-color: #fff;
+   color: #00979c;
+}

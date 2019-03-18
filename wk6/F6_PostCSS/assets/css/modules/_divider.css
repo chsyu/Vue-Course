@@ -1,0 +1,17 @@
+.divider--light,
+.divider--dark {
+   width: 250px;
+   border-top: solid 5px;
+}
+
+.test {
+   columns: 300px 2;
+}
+
+.divider--light {
+   border-color: #fff;
+}
+
+.divider--dark {
+   border-color: $footerBlack;
+}
