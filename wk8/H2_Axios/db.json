@@ -28,6 +28,11 @@
       "first_name": "Roger",
       "last_name": "Bacon",
       "email": "rogerbacon12@yahoo.com"
+    }, {
+      "id": 6,
+      "first_name": "Lucy",
+      "last_name": "Taipei",
+      "email": "lucyb78@gmail.com"
     }
   ]
 }

@@ -1,8 +1,21 @@
-// callback bind
-$(document).ready(function(){
+
+// let second = 0;
+// setInterval(
+//   () => {
+//     second++;
+//     document.querySelector('#timer').innerHTML = `Second is ${second}`;
+//   }, 
+//   1000);
+
+let setTime = () => {
   let second = 0;
-  setInterval(function(){
-    second++;
-    $('.timer').html(`Second is ${second}`);
-  }, 1000);
-});
+  return (
+    () => {
+      second ++;
+      document.querySelector('#timer').innerHTML = `Second is ${second}`;
+    }
+  );
+};
+
+setInterval(setTime(), 1000);
+
