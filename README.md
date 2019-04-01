@@ -17,8 +17,8 @@
 - wk10: 動態網頁開發
 - wk11: 期中專題報告
 - wk12: Vue框架
-- wk13: Vue框架 + Vuex
-- wk14: Vuex
+- wk13: Vuex
+- wk14: Vue Router
 - wk15: PWA
 - wk16: PWA
 - wk17: 專案開發
