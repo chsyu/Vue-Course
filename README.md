@@ -13,7 +13,7 @@
 - wk6: webpack + PostCSS
 - wk7: 放假
 - wk8: 模組化jQuery開發
-- wk9: API + RESTful
+- wk9: RESTful API + OAS
 - wk10: 動態網頁
 - wk11: 期中專題報告
 - wk12: Vue框架
