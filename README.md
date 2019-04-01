@@ -12,14 +12,14 @@
 - wk5: npm與webpack
 - wk6: webpack + PostCSS
 - wk7: 放假
-- wk8: 專案開發練習
-- wk9: 期中專題報告
-- wk10: React基礎與單向資料流
-- wk11: React與React-Router
-- wk12: Redux框架
-- wk13: Redux框架
-- wk14: PWA
+- wk8: 模組化jQuery開發
+- wk9: API + RESTful
+- wk10: 動態網頁
+- wk11: 期中專題報告
+- wk12: Vue框架
+- wk13: Vue框架 + Vuex
+- wk14: Vuex
 - wk15: PWA
-- wk16: 專案開發
+- wk16: PWA
 - wk17: 專案開發
 - wk18: 期末專題
