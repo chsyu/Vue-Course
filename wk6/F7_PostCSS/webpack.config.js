@@ -4,17 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
    entry: './assets/js/app.js',
-      output: {
-         path: path.join(__dirname, './dist'),
-         filename: 'bundle.[chunkhash].js'
-         // publicPath: '/'
-      },
+   output: {
+      path: path.join(__dirname, './dist'),
+      filename: 'bundle.[chunkhash].js'
+      // publicPath: '/'
+   },
    module: {
-      rules: [
-         {
+      rules: [{
             test: /\.(jpe?g|png|gif|svg)$/,
-            use: [
-               {
+            use: [{
                   loader: 'url-loader',
                   options: {
                      limit: 40000,
@@ -36,6 +34,16 @@ module.exports = {
                   loader: 'postcss-loader'
                }]
             })
+         },
+         {
+            test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            use: {
+               loader: 'file-loader',
+               options: {
+                  outputPath: 'css/fonts',
+                  name: '[name].[ext]',
+               },
+            }
          },
          {
             test: /\.(js)$/,
@@ -60,5 +68,3 @@ module.exports = {
       contentBase: 'dist'
    }
 }
-
-
