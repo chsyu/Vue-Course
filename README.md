@@ -7,14 +7,14 @@
 ## 教學進度
 - wk1: 課程簡介
 - wk2: GIT & Github
-- wk3: ES6
-- wk4: ES6
+- wk3: JS
+- wk4: JS
 - wk5: npm與webpack
 - wk6: webpack + PostCSS
 - wk7: 放假
-- wk8: 模組化jQuery開發
-- wk9: RESTful API + OAS
-- wk10: 動態網頁
+- wk8: RESTful API + OAS
+- wk9: 模組化jQuery開發
+- wk10: 動態網頁開發
 - wk11: 期中專題報告
 - wk12: Vue框架
 - wk13: Vue框架 + Vuex
@@ -22,4 +22,4 @@
 - wk15: PWA
 - wk16: PWA
 - wk17: 專案開發
-- wk18: 期末專題
+- wk18: 期末專題報告
