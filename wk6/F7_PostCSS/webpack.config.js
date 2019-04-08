@@ -2,6 +2,16 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let htmlPages = ['index','course'];
+
+let htmlPlugins = htmlPages.map(page => 
+   new HtmlWebpackPlugin({
+      filename: `${page}.html`,
+      template: `assets/${page}.html`,
+      favicon: 'assets/images/favicon.ico'
+   })
+);
+
 module.exports = {
    entry: './assets/js/app.js',
    output: {
@@ -57,12 +67,10 @@ module.exports = {
          }
       ]
    },
+
    plugins: [
-      new ExtractTextPlugin('css/style.css'),
-      new HtmlWebpackPlugin({
-         template: 'assets/index.html',
-         favicon: 'assets/images/favicon.ico'
-      })
+      new ExtractTextPlugin('css/style.[hash].css'),
+      ...htmlPlugins
    ],
    devServer: {
       contentBase: 'dist'

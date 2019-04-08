@@ -13,3 +13,4 @@ $('#image__f2e').attr("src", f2e);
 $('#image__iot').attr("src", iot);
 $('#image__app').attr("src", app);
 $('#image__js').attr("src", js);
+
