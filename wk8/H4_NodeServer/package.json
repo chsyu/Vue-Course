@@ -1,0 +1,13 @@
+{
+  "name": "jsonserver-in-heroku",
+  "version": "1.0.0",
+  "description": "A sample Node.js app using Express 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "json-server": "^0.8.21",
+    "glob": "^7.0.5"
+  }
+}
