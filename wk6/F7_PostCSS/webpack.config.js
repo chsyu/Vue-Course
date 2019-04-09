@@ -2,19 +2,27 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let htmlPages = ['index','course'];
+
+let htmlPlugins = htmlPages.map(page => 
+   new HtmlWebpackPlugin({
+      filename: `${page}.html`,
+      template: `assets/${page}.html`,
+      favicon: 'assets/images/favicon.ico'
+   })
+);
+
 module.exports = {
    entry: './assets/js/app.js',
-      output: {
-         path: path.join(__dirname, './dist'),
-         filename: 'bundle.[chunkhash].js'
-         // publicPath: '/'
-      },
+   output: {
+      path: path.join(__dirname, './dist'),
+      filename: 'bundle.[chunkhash].js'
+      // publicPath: '/'
+   },
    module: {
-      rules: [
-         {
+      rules: [{
             test: /\.(jpe?g|png|gif|svg)$/,
-            use: [
-               {
+            use: [{
                   loader: 'url-loader',
                   options: {
                      limit: 40000,
@@ -38,6 +46,16 @@ module.exports = {
             })
          },
          {
+            test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            use: {
+               loader: 'file-loader',
+               options: {
+                  outputPath: 'css/fonts',
+                  name: '[name].[ext]',
+               },
+            }
+         },
+         {
             test: /\.(js)$/,
             exclude: /(node_modules)/,
             use: {
@@ -49,16 +67,12 @@ module.exports = {
          }
       ]
    },
+
    plugins: [
-      new ExtractTextPlugin('css/style.css'),
-      new HtmlWebpackPlugin({
-         template: 'assets/index.html',
-         favicon: 'assets/images/favicon.ico'
-      })
+      new ExtractTextPlugin('css/style.[hash].css'),
+      ...htmlPlugins
    ],
    devServer: {
       contentBase: 'dist'
    }
 }
-
-
