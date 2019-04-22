@@ -1,0 +1,4 @@
+.section {
+   grid-row: section-start / section-end;
+   grid-column: center-start / center-end;
+}
