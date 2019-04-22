@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    color: #000;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [nav-start] 4rem [nav-end gallery-start] min-content [gallery-end section-start] min-content [section-end footer-start] 6rem [footer-end];
+    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+
+    @media (min-width: 1000px) {
+        grid-template-rows: [gallery-start] min-content [gallery-end section-start] min-content [section-end footer-start] 6rem [footer-end];
+        grid-template-columns: [nav-start] 8rem [nav-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+}

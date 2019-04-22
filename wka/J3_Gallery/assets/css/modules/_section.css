@@ -1,0 +1,8 @@
+.section {
+   background-color: $color-primary-light;
+   grid-column: 1 / -1;
+   @media (min-width: $bp-large) {
+      grid-row: 2 / 3;
+      grid-column: 2 / -1;
+   }
+}
