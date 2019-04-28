@@ -44,7 +44,9 @@ jQuery(function($) {
       }
   `;
 
-  const server = axios.create({ baseURL: "http://localhost:4000/todos" });
+  const server = axios.create({ 
+    baseURL: "http://localhost:4000/todos" 
+  });
 
   let ENTER_KEY = 13;
   let ESCAPE_KEY = 27;
@@ -135,7 +137,7 @@ jQuery(function($) {
     toggleAll: async function(e) {
       let isChecked = $(e.target).prop("checked");
 
-      await this.todos.forEach(async todo => {
+      this.todos.forEach(async todo => {
         todo.completed = isChecked;
         await server.put(`/${todo.id}`, todo);
       });
@@ -168,10 +170,10 @@ jQuery(function($) {
     destroyCompleted: async function() {
       let _completedTodos = this.getCompletedTodos();
       this.todos = this.getActiveTodos();
+      this.render();
       _completedTodos.forEach(async todo => {
             await server.delete(`/${todo.id}`);
       });      
-      this.render();
       let _todos = await server.get("/");
       this.todos = _todos.data;
     },
