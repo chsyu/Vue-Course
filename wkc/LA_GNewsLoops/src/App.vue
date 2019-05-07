@@ -2,16 +2,16 @@
   <div class="container">
     <Nav/>
     <Gallery 
-      v-bind:socialNews="socialNews"
-      v-bind:entertainmentNews="entertainmentNews"
-      v-bind:sportNews="sportNews"
-      v-bind:taiwanNews="taiwanNews"
+      :socialNews="socialNews"
+      :entertainmentNews="entertainmentNews"
+      :sportNews="sportNews"
+      :taiwanNews="taiwanNews"
     />
     <Section
-      v-bind:socialNews="socialNews"
-      v-bind:entertainmentNews="entertainmentNews"
-      v-bind:sportNews="sportNews"
-      v-bind:taiwanNews="taiwanNews"
+      :socialNews="socialNews"
+      :entertainmentNews="entertainmentNews"
+      :sportNews="sportNews"
+      :taiwanNews="taiwanNews"
     />
     <Footer/>
   </div>
