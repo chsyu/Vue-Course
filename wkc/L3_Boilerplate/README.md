@@ -1,4 +1,4 @@
-# video-browser
+# hellovuecli
 
 ## Project setup
 ```
