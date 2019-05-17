@@ -1,0 +1,18 @@
+$color-primary: #c69963;
+$color-primary-dark: #101d2c;
+$color-primary-light: #f9f7f6;
+$color-secondary: #54483A;
+
+$color-text: #101d2c;
+
+$color-white: #fff;
+$color-black: #000;
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+/* RESPONSIVE BREAKPOINTS */
+$bp-large: 62.5rem; /* 1000px */
+$bp-medium: 30rem; /* 480px */
+
+
