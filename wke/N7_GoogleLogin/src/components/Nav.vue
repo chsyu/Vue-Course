@@ -1,6 +1,6 @@
 <template>
   <nav class="nav">
-    <input v-model="checked" @change="setToggle" type="checkbox" class="nav__checkbox" id="nav-toggle">
+    <input @click="onCheck" type="checkbox" class="nav__checkbox" id="nav-toggle">
     <label for="nav-toggle" class="nav__btn">
       <button class="nav__icon"></button>
     </label>
@@ -33,45 +33,44 @@
 export default {
   name: "Nav",
   data() {
-     return {
-        checked: false,
-        size: 'lg',
-        toggle: false
-     };
+    return {
+      checked: false,
+      size: "lg",
+      myNav: "hide-lg"
+    };
   },
   methods: {
     onResize() {
-      this.toggle = false;
-      if (window.innerWidth > 1000)
-        this.size = 'lg';        
-      else 
-        this.size = 'sm';
+      if (window.innerWidth > 1000) {
+        this.size = "lg";
+        if (!this.checked) this.myNav = "notransition hide-lg";
+      } else {
+        this.size = "sm";
+        if (!this.checked) this.myNav = "notransition hide-sm";
+      }
+    },
+
+    onCheck() {
+      if (this.checked && this.size == "sm") this.myNav = "hide-sm";
+      else if (this.checked && this.size == "lg") this.myNav = "hide-lg";
+      else this.myNav = "show";
+      this.checked = !this.checked;
     },
 
     onRoute() {
       this.checked = !this.checked;
-    },
+    }
+  },
 
-    setToggle() {
-        this.toggle = true;
-    }
-  },
-  computed: {
-    myNav() {
-      if(this.toggle && !this.checked && this.size == 'lg')
-        return 'hide-lg';
-      else if (this.toggle && !this.checked && this.size == 'sm')
-        return 'hide-sm';
-      else if(!this.checked && this.size == 'lg')
-        return 'hide-lg notransition';
-      else if (!this.checked && this.size == 'sm')
-        return 'hide-sm notransition';      
-      else
-        return 'show';
-    }
-  },
   created() {
-    window.addEventListener('resize', this.onResize);
+    window.addEventListener('resize',this.onResize);
+    if (window.innerWidth > 1000) {
+      this.size = "lg";
+      this.myNav = "hide-lg";
+    } else {
+      this.size = "sm";
+      this.myNav = "hide-sm";
+    }
   }
 };
 </script>
@@ -130,7 +129,8 @@ export default {
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -142,7 +142,5 @@ export default {
 }
 
 .overlay-width {
-
 }
-
 </style>
