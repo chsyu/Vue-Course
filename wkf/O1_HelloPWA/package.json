@@ -1,0 +1,24 @@
+{
+  "name": "JSF2E-github-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1 -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chsyu/JSF2E-github-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/chsyu/JSF2E-github-clone/issues"
+  },
+  "homepage": "https://github.com/chsyu/JSF2E-github-clone#readme"
+}

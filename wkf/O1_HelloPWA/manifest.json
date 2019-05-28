@@ -1,0 +1,22 @@
+{
+  "name": "Resume for Chi-Shan Yu",
+  "short_name": "Resume",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#3f51b5",
+  "description": "A simple Resume for teaching F2E",
+  "dir": "ltr",
+  "lang": "en-US"
+}
+
+
